@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm nghiệm phương trình bậc nhất</title>
+</head>
+<body>
+<h1>Tìm nghiệm phương trình bậc nhất ax + b = c</h1>
+<form action="">
+  <table>
+    <tr>
+      <td>
+        <input id="input-a" type="text" placeholder="Nhập vào giá trị a">
+      </td>
+      <td>
+        <input id="input-b" type="text" placeholder="Nhập vào giá trị b">
+      </td>
+      <td>
+        <input id="input-c" type="text" placeholder="Nhập vào giá trị c">
+      </td>
+      <td>
+        <button type="button" onclick="result()">Kết quả</button>
+      </td>
+    </tr>
+
+  </table>
+  <p>
+    Giá trị của X là:
+    <span id="calculate"></span>
+  </p>
+</form>
+
+<script>
+  function result() {
+    let a = document.getElementById("input-a").value;
+    let b = document.getElementById("input-b").value;
+    let c = document.getElementById("input-c").value;
+    if (a != 0) {
+      document.getElementById("calculate").innerHTML = (c -b) / a;
+    }
+    else {
+      document.getElementById("calculate").innerHTML = "Phương trình vô nghiệm!"
+    }
+  }
+</script>
+</body>
+</html>
