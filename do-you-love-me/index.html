@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1 {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        #no {
+            width: 60px;
+            height: 40px;
+            position: absolute;
+            top: 43%;
+            left: 50%;
+        }
+        #yes {
+            width: 60px;
+            height: 40px;
+            position: absolute;
+            top: 43%;
+            left: 40%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Do you love me?</h1>
+    <button id="yes">Yes</button>
+    <button id="no" onmouseover="changePosition()">No</button>
+
+    <script>
+        function changePosition() {
+            document.getElementById("no").style.top = Math.floor(Math.random()*100) + "vh";
+            document.getElementById("no").style.left = Math.floor(Math.random()*100) + "vw";
+        }
+        document.getElementById("yes").addEventListener("click", function () {
+            alert("Oh year!");
+        })
+    </script>
+</body>
+</html>
